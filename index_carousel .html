@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour Du Lịch</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        color: #fff;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      header img {
+        width: 100%;
+        display: block;
+      }
+
+      h1 {
+        float: left;
+        width: 100%;
+        text-align: center;
+        color: rgb(46, 46, 154);
+      }
+
+      .container {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      .product-section {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .product {
+        text-align: center;
+        padding: 10px;
+        position: relative;
+      }
+
+      .view {
+        position: absolute;
+        background-color: #ffc400e4;
+        padding: 5px 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      .new {
+        position: absolute;
+        right: 10px;
+        background-color: #ff0000e4;
+        color: white;
+        padding: 5px 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+
+      .product img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .carousel-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .carousel img {
+        width: 100%;
+      }
+
+      .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: white;
+      }
+
+      .prev {
+        left: 10px;
+      }
+
+      .next {
+        right: 10px;
+      }
+
+      footer {
+        background-color: #19aab454;
+        text-align: center;
+        line-height: 50px;
+        padding: 10px;
+        height: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="carousel-container">
+        <div class="carousel">
+          <img src="img/banner.jpg" alt="" />
+          <img src="img/banner2.jpg" alt="" />
+          <img src="img/banner3.jpg" alt="" />
+          <img src="img/banner4.jpg" alt="" />
+        </div>
+        <button class="carousel-btn prev" onclick="prevSlide()">
+          &#10094;
+        </button>
+        <button class="carousel-btn next" onclick="nextSlide()">
+          &#10095;
+        </button>
+      </div>
+    </header>
+    <div class="container">
+      <h1>TOUR NHIỀU NGƯỜI QUAN TÂM</h1>
+      <section id="best-sellers" class="product-section">
+        <div class="product">
+          <div class="view"><i class="fa fa-eye"></i> 556</div>
+          <img src="img/hinh2.jpg" alt="Tour bán chạy 1" />
+          <h2>Tour Bán Chạy 1</h2>
+          <p>Mô tả Tour bán chạy 1</p>
+        </div>
+        <div class="product">
+          <div class="new"><i class="fa fa-fire"></i> New</div>
+          <img src="img/hinh4.jpg" alt="Tour bán chạy 2" />
+          <h2>Tour Bán Chạy 2</h2>
+          <p>Mô tả Tour bán chạy 2</p>
+        </div>
+        <div class="product">
+          <div class="view"><i class="fa fa-eye"></i> 312</div>
+          <img src="img/hinh6.jpg" alt="Tour bán chạy 6" />
+          <h2>Tour Bán Chạy 6</h2>
+          <p>Mô tả Tour bán chạy 6</p>
+        </div>
+        <div class="product">
+          <img src="img/hinh3.jpg" alt="Tour bán chạy 3" />
+          <h2>Tour Bán Chạy 3</h2>
+          <p>Mô tả Tour bán chạy 3</p>
+        </div>
+      </section>
+      <h1>TOUR NỔI BẬT</h1>
+      <section id="product-highlight" class="product-section">
+        <div class="product">
+          <div class="new"><i class="fa fa-fire"></i> New</div>
+          <img src="img/hinh1.jpg" alt="Tour nổi bật 1" />
+          <h2>Tour Nổi Bật 1</h2>
+          <p>Mô tả Tour nổi bật 1</p>
+        </div>
+        <div class="product">
+          <div class="view"><i class="fa fa-eye"></i> 5222</div>
+          <div class="new"><i class="fa fa-fire"></i> New</div>
+          <img src="img/hinh2.jpg" alt="Tour nổi bật 2" />
+          <h2>Tour Nổi Bật 2</h2>
+          <p>Mô tả Tour nổi bật 2</p>
+        </div>
+        <div class="product">
+          <div class="view"><i class="fa fa-eye"></i> 855</div>
+          <img src="img/hinh3.jpg" alt="Tour nổi bật 3" />
+          <h2>Tour Nổi Bật 3</h2>
+          <p>Mô tả Tour nổi bật 3</p>
+        </div>
+        <div class="product">
+          <div class="view"><i class="fa fa-eye"></i> 100</div>
+          <img src="img/hinh4.jpg" alt="Tour nổi bật 4" />
+          <h2>Tour Nổi Bật 4</h2>
+          <p>Mô tả Tour nổi bật 4</p>
+        </div>
+      </section>
+      <h1>TOUR MỚI</h1>
+      <section id="new-products" class="product-section">
+        <div class="product">
+          <div class="new"><i class="fa fa-fire"></i> New</div>
+          <img src="img/hinh4.jpg" alt="Tour mới 1" />
+          <h2>Tour Mới 1</h2>
+          <p>Mô tả Tour mới 1</p>
+        </div>
+        <div class="product">
+          <div class="new"><i class="fa fa-fire"></i> New</div>
+          <img src="img/hinh5.jpg" alt="Tour mới 2" />
+          <h2>Tour Mới 2</h2>
+          <p>Mô tả Tour mới 2</p>
+        </div>
+        <div class="product">
+          <div class="new"><i class="fa fa-fire"></i> New</div>
+          <img src="img/hinh6.jpg" alt="Tour mới 3" />
+          <h2>Tour Mới 3</h2>
+          <p>Mô tả Tour mới 3</p>
+        </div>
+        <div class="product">
+          <div class="new"><i class="fa fa-fire"></i> New</div>
+          <img src="img/hinh1.jpg" alt="Tour mới 4" />
+          <h2>Tour Mới 4</h2>
+          <p>Mô tả Tour mới 4</p>
+        </div>
+      </section>
+    </div>
+    <footer>&copy; 2023 Du lịch Việt</footer>
+
+    <script>
+      let currentIndex = 0;
+      const carousel = document.querySelector(".carousel");
+      const slides = document.querySelectorAll(".carousel img");
+
+      function showSlide(index) {
+        const percentage = -index * 100 + "%";
+        carousel.style.transform = "translateX(" + percentage + ")";
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      }
+
+      // Automatic slide change every 3 seconds
+      setInterval(nextSlide, 3000);
+    </script>
+  </body>
+</html>
